@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+<h1>Book 1: Real Ninja: Over 20 True Stories of Japan's Secret Assassins</h1>
+
+<h1>Book 2: Mind Fist: The Asian Art of the Ninja Masters</h1>
+
+<h1>Book 3: Honorable Employee Handbook</h1>
+
+<h1>Book 4: Ninjas: Masters of Stealth and Secrecy </h1>
+
+<button onclick="myFunction()">Sort</button>
+
+<script>
+function book(title){
+	this.title= title;
+	this.length = title.length;
+}
+
+var book1 = new book("Real Ninja: Over 20 True Stories of Japan's Secret Assassins");
+var book2 = new book("Mind Fist: The Asian Art of the Ninja Masters");
+var book3 = new book("Ninja Burger: Honorable Employee Handbook");
+var book4 = new book("Ninjas: Masters of Stealth and Secrecy");
+
+myArray = [book1.title, book2.title, book3.title, book4.title];
+myArray.sort();
+
+
+
+function myFunction()
+{
+	var i = 0;
+	var count = 0;
+	while(i < myArray[i].length){
+		while (count < myArray[i].length){
+				document.write(myArray[i].charAt(count) + myArray[i+1].charAt(count) +  myArray[i+2].charAt(count) + myArray[i+3].charAt(count) + "<br />");
+				count++;
+			
+		}
+	    i++;
+	    
+	}
+	
+		
+}
+
+</script>
+
+
+
+</body>
