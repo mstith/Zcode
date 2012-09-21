@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen">
+<title>Zappos Z'Code Zombie Survival</title>
+<script>
+function book(title){
+	this.title= title;
+	this.length = title.length;
+}
+
+var book1 = new book("Real Ninja: Over 20 True Stories of Japan's Secret Assassins");
+var book2 = new book("Mind Fist: The Asian Art of the Ninja Masters");
+var book3 = new book("Ninja Burger: Honorable Employee Handbook");
+var book4 = new book("Ninjas: Masters of Stealth and Secrecy");
+
+myArray = [book1.title, book2.title, book3.title, book4.title];
+myArray.sort();
+
+
+function myFunction()
+{
+	var i = 0;
+	var count = 0;
+	
+	while (count < myArray[3].length){
+			var theText= [];
+			var lb1=document.createElement("BR");
+			var mytable=document.getElementById("ninjaBooks");
+			var newrow=mytable.insertRow(-1); //add new row to end of table
+			var newcell=newrow.insertCell(0); //insert new cell to row
+		 	var newcell2=newrow.insertCell(-1);
+		 	var newcell3=newrow.insertCell(-1);
+		 	var newcell4=newrow.insertCell(-1);
+			
+						
+			newcell.innerHTML=myArray[i].charAt(count);
+			newcell2.innerHTML=myArray[i+1].charAt(count);
+			newcell3.innerHTML=myArray[i+2].charAt(count);
+			newcell4.innerHTML=myArray[i+3].charAt(count);
+			
+			count++;
+			
+	}
+	   
+    
+	
+}
+</script>
+</head>
+<body>
+<div id="container" class="container clearfix">
+	<div id="headwrapper" class="grid_12">
+		<div id="logo" class="grid_5">
+			<img src="img/logo.png" alt="logo" />
+		</div>
+		
+		<div id="menu" class="grid_7 omega">
+			<ul class="menu">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="survivalcourses.html">Zombie Survival Courses</a>
+				<li><a href="ninja.html">Essential Ninja Books</a></li>
+				<li><a href="contact.html">Contact</a><li>
+			</ul>
+		</div>
+	</div>
+	<div id="content" class="grid_9">
+	
+	<table id="ninjaBooks" class="ninjaBooks">
+	
+	</table>	
+
+	<table class="ninjaBookP">
+	<tr>
+	<td>
+		Book 1: Real Ninja: Over 20 True Stories of Japan's Secret Assassins<br/>
+	</td>
+	</tr>
+	<tr>
+	<td>
+	    Book 2: Mind Fist: The Asian Art of the Ninja Masters<br/>
+	</td>
+	</tr>
+	<tr>
+	<td>
+		Book 3: Honorable Employee Handbook<br/>
+	</td>
+	</tr>
+	<tr>
+	<td>
+		Book 4: Ninjas: Masters of Stealth and Secrecy
+	</td>
+	</tr>
+
+	</table>
+	<center><button onclick="myFunction()" class="sortButton">Sort</button></center>
+	</div>
+	
+	<div id="sidebar" class="grid_3 omega">
+	<table id="survival">
+		<tr>
+			<td><h1>S</h1></td>
+			<td>ize up the situation </td>
+		</tr>
+		<tr>
+			<td><h1>U</h1></td>
+			<td>ndue haste makes waste </td>
+		</tr>
+		<tr>
+			<td><h1>R</h1></td>
+			<td>emember where you are </td>
+		</tr>
+		<tr>
+			<td><h1>V</h1></td>
+			<td>alue your life</td>
+		</tr>
+		<tr>
+			<td><h1>I</h1></td>
+			<td>mprovise</td>
+		</tr>
+		<tr>
+			<td><h1>V</h1></td>
+			<td>anquish fear and panic</td>
+		</tr>
+		<tr>
+			<td><h1>A</h1></td>
+			<td>ct like the natives</td>
+		</tr>
+		<tr>
+			<td><h1>L</h1></td>
+			<td>earn basics skills</td>
+		</tr>
+	</table>
+	</div>
+	
+	<div id="footer" class="grid_12">
+	Created by: <a href="mailto: mstith@zappos.com">Michael Stith</a>
+	</div>
+
+
+
+</div>
+</body>
+</html>
